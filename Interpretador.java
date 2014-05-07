@@ -11,7 +11,7 @@ class Interpretador {
     
     public void interpreta(String l[]) {
         this.linhas = l;
-		Opera o = new Opera();
+		LeString o = new LeString();
 		o.busca(linhas);
         
         /*for(int i = 0; i < this.linhas.length; i++) {
