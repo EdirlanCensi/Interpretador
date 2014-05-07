@@ -12,13 +12,13 @@ class Interpretador {
     public void interpreta(String l[]) {
         this.linhas = l;
 		Opera o = new Opera();
-		o.busca(l);
+		o.busca(linhas);
         
-        for(int i = 0; i < this.linhas.length; i++) {
+        /*for(int i = 0; i < this.linhas.length; i++) {
             if(this.linhas[i] != null) {
-                // TODO: interpretar a linha
+                // TODO: interpretar a linha 
                 //System.out.println("Linha " + (i + 1) + ": " + this.linhas[i]);
             }
-        }
+        } */
     }
 }

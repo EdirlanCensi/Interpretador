@@ -6,7 +6,20 @@ class Opera{
 	
 	public void busca(String s[]){
 		for(i=0; i < s.length; i++){
+			if(s[i] != null){
 			
+					
+			
+			
+			
+			
+			
+			
+			
+			
+	
+			}
+				
 		}
 	}
 	
