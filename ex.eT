@@ -1,2 +1,4 @@
-@ x;
-@ x <- 20;
+@ &x;
+@ &x <- 20;
+exibe(*teste)!
+exibe(&x)!
