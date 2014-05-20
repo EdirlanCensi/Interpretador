@@ -1,6 +1,5 @@
 class LeString {
 	Fluxo f =new Fluxo();
-	Comando c = new Comando();
 	String linha;
 	int i,valores, indiceVet = 0, teste = 0;
 	Variaveis var[] = new Variaveis[200];
@@ -11,8 +10,9 @@ class LeString {
 			teste = 0;
 			if(s[i] != null){
 				linha = s[i];
+			if(!linha.contains("exibe(") ){
 				linha = linha.replace(" ","");
-				
+			}
 				if(linha.contains(";")){ //identifica que é uma declaração de variavel ou atribuição
 					Variaveis v = new Variaveis();
 					v.declaraVar(linha,var, indiceVet);
@@ -32,23 +32,24 @@ class LeString {
 					Exibe e = new Exibe();
 					e.imprimeString(linha,var,indiceVet);
 				
-				}
-				
-				if(linha.contains("ler(")){ //le do teclado
-				
-				
-				}
+				}		
 				
 				if(linha.contains("se(")){ //controle de fluxo
-				
+					Fluxo f = new Fluxo();
+					
 				
 				
 				}
 				
 				if(linha.contains("enquanto(")){ //laço
+					Laco  l = new Laco();
 				
 				
+				}
 				
+				if(linha.contains("escreva(")){	
+					Escreva es = new Escreva();
+					es.escrever(linha ,var,indiceVet);
 				}
 			}
 				
