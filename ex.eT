@@ -6,3 +6,11 @@
 @ &y <- 20;
 exibe(*teste)!
 exibe(&x)!
+@ &f;
+@ &h <- 50;
+&f <- 30;
+
+exibe(&x)!
+exibe(&y)!
+exibe(&f)!
+exibe(&h)!
