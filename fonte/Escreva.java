@@ -11,7 +11,7 @@ class Escreva{
 		if(nomeVar.contains("$")){
 			frase = in.nextLine();
 		}
-		//System.out.println(nomeVar);
+
 		for(int i=0; i < indiceVet ; i++){
 			if(nomeVar.equals(var[i].nome) ){
 				if(nomeVar.contains("&")){

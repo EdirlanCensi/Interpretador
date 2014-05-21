@@ -64,7 +64,7 @@ class LeString {
 				
 				if(linha.contains("enquanto(")){ //laço
 					Laco  l = new Laco();
-				
+					
 				
 				}
 				
@@ -75,9 +75,7 @@ class LeString {
 			}
 				
 		}
-		/*for(i = 0; i < indiceVet; i++){
-			System.out.println("Nome = "+var[i].nome+"\nValor = "+var[i].valor);
-		}*/
+		
 	}
 	
 }

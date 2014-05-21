@@ -2,6 +2,7 @@ class Variaveis{
 	public String nome,aux,aux2, frase;
 	public double aux3;
 	public double valor;
+	public Comandos c = new Comandos();
 	
 	public Variaveis(){
 		this.nome = "NULL";
@@ -24,7 +25,12 @@ class Variaveis{
 				if(s.contains("&")){
 					aux = s.substring(s.indexOf("&"), s.indexOf("<-"));		
 					aux2 = s.substring(s.indexOf("<-")+2, s.indexOf(";"));
-					aux3 = Double.parseDouble(aux2);
+					
+					if(aux2.contains("(")){
+						aux3 = c.operacao(aux2, var, indiceVet);
+					}else{	
+						aux3 = Double.parseDouble(aux2);
+					}
 				}
 				if(s.contains("$")){
 					aux = s.substring(s.indexOf("$"), s.indexOf("<-"));		
