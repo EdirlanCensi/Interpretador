@@ -1,14 +1,9 @@
-@ $h;    //cria string 
-@ &f <- 34; //cria e atribui variavel double
-exibe(&f)! // imprime double
-@ $nome; //cria string
-$nome <- Edirlan; //cria string e atribui
-exibe($nome)! //imprime string
-
-exibe(*Digite seu nome:)! //imprime na tela texto
-escreva($h)! //le string
-exibe($h)! //imprime string
 @ &h <- 500;
 exibe(&h)!
+se( &h > 200 )
+	exibe(*SIM)!
+	&h <- 1000;
+	exibe(&h)!
+end!
 
 //nesta linguagem é possivel criar variaveis com mesmo nome desde que sejam de tipos diferentes
