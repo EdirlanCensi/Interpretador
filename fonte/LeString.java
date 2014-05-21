@@ -1,19 +1,22 @@
 class LeString {
 	String linha;
 	Fluxo f = new Fluxo();
-	int i,valores, indiceVet = 0, teste = 0,linhaAtual = 0;
+	int i,valores, indiceVet = 0, teste = 0,linhaAtual = 0, testeF=0;
 	Variaveis var[] = new Variaveis[200];
+	int fl,aux=0;
+	String linhaAux;
 	
-	
+	int volta = 0;
+				
 	public void busca(String s[]){
 		for(i=0; i < s.length-1; i++){
 			teste = 0;
 			linhaAtual = i;
-			if(s[i] != null){
-				linha = s[i];
-			if(!linha.contains("exibe(") && !linha.contains("escreva(")){
-				linha = linha.replace(" ","");
-			}
+			if(s[i] != null){	
+				linha = s[i];	
+				if(!linha.contains("exibe(") && !linha.contains("escreva(")){
+					linha = linha.replace(" ","");
+				}
 				if(linha.contains(";")){ //identifica que é uma declaração de variavel ou atribuição
 					Variaveis v = new Variaveis();
 					v.declaraVar(linha,var, indiceVet);
@@ -41,18 +44,16 @@ class LeString {
 				}		
 				
 				if(linha.contains("se(")){ //controle de fluxo
-					int fl,auxl=0;
-					String linhaAux = "NULL";
-					
+						
 					fl = f.fluxo(linha,var,indiceVet,linhaAtual); //faz o fluxo
 					if(fl == -1){ //se expressão for falsa ignora escopo do if
-						auxl = linhaAtual;
+						aux = linhaAtual;
 						do{
-							linhaAux = s[auxl];
-							auxl++;  
+							linhaAux = s[aux];
+							aux++;  
 						}while( !linhaAux.contains("end!")  ); 
 						
-						linhaAtual = auxl;
+						linhaAtual = aux;
 						
 						i = linhaAtual;
 					
@@ -63,19 +64,35 @@ class LeString {
 				}
 				
 				if(linha.contains("enquanto(")){ //laço
-					Laco  l = new Laco();
+					fl = f.fluxo(linha,var,indiceVet,linhaAtual);
 					
-				
+					if(fl==-1){//se caso a condição do while não for verdadeira
+						
+						aux = linhaAtual;
+						do{
+							linhaAux = s[aux];
+							aux++;  
+						}while( !linhaAux.contains("endL!")  ); 
+						
+						linhaAtual = aux;
+						
+						i = linhaAtual;
+						testeF = 1;
+					}else{
+						linhaAtual = fl;
+						i = linhaAtual;
+					}
 				}
-				
+				if(linha.contains("endL")&& testeF == 0){
+					i = volta;
+				}
+					
 				if(linha.contains("escreva(")){ //scaner teclado
 					Escreva es = new Escreva();
 					es.escrever(linha ,var,indiceVet);
-				}
-			}
-				
-		}
-		
+				}		
+			}		
+		}	
 	}
 	
 }

@@ -1,0 +1,6 @@
+@ &x <- 0;
+@ &y <- 0;
+enquanto(&x < 5)
+	exibe(&x)!
+	&x <- (&x + 1);
+endL!
