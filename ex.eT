@@ -1,19 +1,14 @@
-@ &x;
-@ &x <- 20;
-@ &x <- 4;
-@ &y;
-@ &y <- 10;
-@ &y <- 20;
-exibe(*teste)!
-exibe(&x)!
-@ &f;
-@ &h <- 50;
-&f <- 30;
+@ $h;    //cria string 
+@ &f <- 34; //cria e atribui variavel double
+exibe(&f)! // imprime double
+@ $nome; //cria string
+$nome <- Edirlan; //cria string e atribui
+exibe($nome)! //imprime string
 
-exibe(&x)!
-exibe(&y)!
-exibe(&f)!
+exibe(*Digite seu nome:)! //imprime na tela texto
+escreva($h)! //le string
+exibe($h)! //imprime string
+@ &h <- 500;
 exibe(&h)!
-exibe(*Digite um numero:)!
-escreva(&h)!
-exibe(&h)!
+
+//nesta linguagem é possivel criar variaveis com mesmo nome desde que sejam de tipos diferentes

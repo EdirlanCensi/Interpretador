@@ -1,5 +1,4 @@
 class LeString {
-	Fluxo f =new Fluxo();
 	String linha;
 	int i,valores, indiceVet = 0, teste = 0;
 	Variaveis var[] = new Variaveis[200];
@@ -10,7 +9,7 @@ class LeString {
 			teste = 0;
 			if(s[i] != null){
 				linha = s[i];
-			if(!linha.contains("exibe(") ){
+			if(!linha.contains("exibe(") && !linha.contains("escreva(")){
 				linha = linha.replace(" ","");
 			}
 				if(linha.contains(";")){ //identifica que é uma declaração de variavel ou atribuição
@@ -18,7 +17,12 @@ class LeString {
 					v.declaraVar(linha,var, indiceVet);
 					for(int i=0; i < indiceVet; i++){ //verifica se já existe a variavel declarada e altera o valor dela caso exita;
 						if (var[i].nome.equals(v.nome)){
-							this.var[i].valor = v.valor;	
+							if(v.nome.contains("&")){
+								this.var[i].valor = v.valor;
+							}
+							if(v.nome.contains("$")){
+								this.var[i].frase = v.frase;
+							}
 							teste=1;
 						}
 					}
