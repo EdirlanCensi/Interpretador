@@ -16,13 +16,13 @@ class LeString {
 				if(linha.contains(";")){ //identifica que é uma declaração de variavel ou atribuição
 					Variaveis v = new Variaveis();
 					v.declaraVar(linha,var, indiceVet);
-					for(int i=0; i < indiceVet; i++){
+					for(int i=0; i < indiceVet; i++){ //verifica se já existe a variavel declarada e altera o valor dela caso exita;
 						if (var[i].nome.equals(v.nome)){
 							this.var[i].valor = v.valor;	
 							teste=1;
 						}
 					}
-					if (teste == 0 && linha.contains("@") ){ // se for declaração 
+					if (teste == 0 && linha.contains("@") ){ //se não existe a variavel, declara e armazena seu valor 
 						var[indiceVet] = v;
 						indiceVet++;
 					}						
@@ -47,7 +47,7 @@ class LeString {
 				
 				}
 				
-				if(linha.contains("escreva(")){	
+				if(linha.contains("escreva(")){ //scaner teclado
 					Escreva es = new Escreva();
 					es.escrever(linha ,var,indiceVet);
 				}
