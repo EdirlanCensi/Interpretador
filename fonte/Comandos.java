@@ -31,14 +31,14 @@ class Comandos{
 							return aux1 / aux2;
 						}else{
 							System.out.println("DIVISÃO POR ZERO");
+							break;
 						}
 					}
 					if(token =='%'){
 							return aux1 % aux2;
 					}
 				}	
-			}
-			
+			}	
 		}
 		return 0;
 	}

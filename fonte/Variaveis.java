@@ -7,8 +7,7 @@ class Variaveis{
 	public Variaveis(){
 		this.nome = "NULL";
 		this.valor = 0;
-		this.frase = "NULL";
-		
+		this.frase = "NULL";		
 	}
 	public void declaraVar(String s, Variaveis var[], int indiceVet){
 		if(s.contains("<-")){
@@ -22,7 +21,7 @@ class Variaveis{
 					this.frase = aux;
 				}
 			}else{ // se for somente atribuição
-				if(s.contains("&")){
+				if(s.contains("&")){ //se for double
 					aux = s.substring(s.indexOf("&"), s.indexOf("<-"));		
 					aux2 = s.substring(s.indexOf("<-")+2, s.indexOf(";"));
 					
@@ -32,7 +31,7 @@ class Variaveis{
 						aux3 = Double.parseDouble(aux2);
 					}
 				}
-				if(s.contains("$")){
+				if(s.contains("$")){ //se for string
 					aux = s.substring(s.indexOf("$"), s.indexOf("<-"));		
 					aux2 = s.substring(s.indexOf("<-")+2, s.indexOf(";"));
 				}
@@ -48,7 +47,7 @@ class Variaveis{
 					}
 				}	
 			}
-		}else{ //se for declaração
+		}else{ //se for só declaração
 			if(s.contains("@")){
 				if(s.contains("&")){
 					this.nome = s.substring(s.indexOf("&"), s.indexOf(";"));

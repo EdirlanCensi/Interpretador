@@ -10,7 +10,7 @@ class Exibe {
 					aux = s.substring(s.indexOf("&"), s.indexOf("!")-1);
 					for(int j = 0; j < indiceVet; j++){
 						if(var[j].nome.equals(aux) ){
-							System.out.println(var[j].valor);
+							System.out.println( var[j].valor);
 						}
 					}
 				}
@@ -18,10 +18,11 @@ class Exibe {
 					aux = s.substring(s.indexOf("$"), s.indexOf("!")-1);
 					for(int j = 0; j < indiceVet; j++){
 						if(var[j].nome.equals(aux) ){
-							System.out.println(var[j].frase);
+							System.out.println( var[j].frase);
 						}
 					}
 				}
+				
 		}
 	}
 }

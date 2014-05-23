@@ -3,7 +3,7 @@
  *
  * Esse código é um interpretador para a linguagem 'eT'.
  *
- * Por Edirlan Cenci e Taiane Baldin
+ * Por Edirlan Censi e Taiane Baldin
  */
 
 class Interpretador {
