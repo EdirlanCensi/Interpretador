@@ -1,2 +1,21 @@
-@ x;
-@ x <- 20;
+@ &i <- 2;
+@ &num;
+@ &aux;
+@ &aux2;
+@ &teste <- 0;
+	
+	exibe(*Digite um numero)!
+	escreva(&num)!
+	&aux <- (&num-1);
+	enquanto(&i < &aux)
+		&aux2 <- (&num % &i);
+		se(&aux2 ? 0)
+			exibe(*NAO EH PRIMO)!
+			&teste <- 1;
+		end
+		&i <- (&i+1);
+	fim
+	
+	se(&teste ? 0)
+		exibe(*PRIMO)!
+	end
