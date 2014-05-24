@@ -5,7 +5,7 @@
 @ &teste <- 0;
 	
 	exibe(*Digite um numero)!
-	escreva(&num)!
+	leia(&num)!
 	&aux <- (&num-1);
 	enquanto(&i < &aux)
 		&aux2 <- (&num % &i);

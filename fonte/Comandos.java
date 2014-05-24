@@ -1,4 +1,16 @@
-class Comandos{
+/**
+ * Universidade Federal da Fronteira Sul
+ * Ciência da Computação
+ * 3ª fase - Programação I
+ * 
+ * Desenvolvido por:
+ * Edirlan Cenci - edirlan.censi@hotmail.com
+ * Taiane Baldin - taiane.baldin@gmail.com
+ *
+ * Esse programa é um interpretador Java para a linguagem 'eT'.
+ * Essa classe que identifica as expressões/tokens, as separa em variaveis para executar os comandos/expressões
+ **/
+ class Comandos{
 	public String ant,prox;
 	public char token;
 	public double aux1, aux2, aux3;
@@ -10,13 +22,10 @@ class Comandos{
 			}catch(Exception ex){
 				if( s.charAt(i) == '+'||s.charAt(i) == '-'||s.charAt(i) == '*'||s.charAt(i) == '/'|| s.charAt(i) == '%' ){
 					token = s.charAt(i);
-					ant =  s.substring(s.indexOf("(")+1, s.indexOf(token));
-					
-					prox = s.substring(s.indexOf(token)+1, s.indexOf(")"));
-					
+					ant =  s.substring(s.indexOf("(")+1, s.indexOf(token));	
+					prox = s.substring(s.indexOf(token)+1, s.indexOf(")"));					
 					aux1 = verificaExpressao(ant ,v,indiceVet);
-					aux2 = verificaExpressao(prox ,v,indiceVet);
-					
+					aux2 = verificaExpressao(prox ,v,indiceVet);					
 					if(token == '+'){
 						return aux1 + aux2;
 					}	
