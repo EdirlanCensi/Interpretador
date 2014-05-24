@@ -1,17 +1,20 @@
 /**
- * Exemplo de interpretador.
+ * Universidade Federal da Fronteira Sul
+ * Ciência da Computação
+ * 3ª fase - Programação I
  *
- * Esse é o ponto de partida para o interpretador da linguagem 'Blah'.
- * O único objetivo desse programa é instanciar um objeto Blah, que é
+ * Esse é o ponto de partida para o interpretador da linguagem 'eT'.
+ * O único objetivo desse programa é instanciar um objeto eT, que é
  * o interpretador da linguagem, passando para ele o caminho do arquivo
- * a ser interpretador. Para mais informações, veja o arquivo Blah.java
+ * a ser interpretador. Para mais informações, veja o arquivo eT.java
  *
  * Para executar, rode o seguinte comando no terminal:
- * java Blah ./teste.blah
+ * java eT ./teste.eT
  * 
- * Por Fernando Bevilacqua <fernando.bevilacqua@uffs.edu.br>
+ * Por:
+ * Edirlan Cenci - edirlan.censi@hotmail.com
+ * Taiane Baldin - taiane.baldin@gmail.com
  */
-
 import java.util.Scanner;
 import java.io.File;
 

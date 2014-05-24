@@ -8,7 +8,7 @@
  * Taiane Baldin - taiane.baldin@gmail.com
  *
  * Esse programa é um interpretador Java para a linguagem 'eT'.
- * Essa classe busca cada linha para fazer a interpretação e chamar as respectivas classes/métodos.
+ * Essa lê do teclado e salva na variavel.
  **/
  import java.util.*;
 class Leia{
