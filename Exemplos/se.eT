@@ -1,0 +1,7 @@
+@ &a;
+@ &a <- 5;
+se (&a>1)
+	exibe(*Maior)!
+senao
+	exibe(*Menor)!
+end

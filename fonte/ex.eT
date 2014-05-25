@@ -18,6 +18,7 @@
 	
 	se(&teste ? 0)
 		exibe(*PRIMO)!
+		#exibe(*PRIMO primo)!
 	senao
 		exibe(*NAO PRIMO)!
 	end

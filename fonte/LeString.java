@@ -28,6 +28,12 @@
 					linha = linha.replace(" ","");//tira espaços
 				}
 				
+				//para comentários
+				if(linha.contains("#")){
+					linha = s[i+1];
+					//break;
+				}	
+				
 				//identifica que é uma declaração de variavel ou atribuição
 				if(linha.contains(";")){
 					teste = 0;
