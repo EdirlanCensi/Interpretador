@@ -23,7 +23,9 @@
 	}
 	public void declaraVar(String s, Variaveis var[], int indiceVet){
 		if(s.contains("<-")){
-			if(s.contains("@")){  //se for declaração com atribuição
+			
+			//se for declaração com atribuição
+			if(s.contains("@")){  
 				this.nome = s.substring(s.indexOf("@")+1, s.indexOf("<-"));
 				aux = s.substring(s.indexOf("<-")+2, s.indexOf(";"));
 				if(s.contains("&")){
@@ -32,7 +34,10 @@
 				if(nome.contains("$") ){
 					this.frase = aux;
 				}
-			}else{ // se for somente atribuição
+			}
+			
+			// se for somente atribuição
+			else{ 
 				if(s.contains("&")){ //se for double
 					aux = s.substring(s.indexOf("&"), s.indexOf("<-"));		
 					aux2 = s.substring(s.indexOf("<-")+2, s.indexOf(";"));

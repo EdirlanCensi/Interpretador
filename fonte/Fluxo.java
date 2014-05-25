@@ -29,8 +29,9 @@
 				if(token == '?'){		
 					if(aux1==aux2){
 						return linhaAtual;//condição valida continua executando na proxima linha, dentro do escopo do se.
-					}else{ 	
+					}else{
 						return -1;//para sair do escopo do se
+						
 					}
 				}
 

@@ -1,3 +1,19 @@
-@ &i;
-@ &i <- 2;
-exibe(*i e:, &i)!
+@ &x <- 2;
+exibe(*x e: )!
+exibe(&x)!
+
+@ $aux <- xuxu;
+exibe(*aux e: )!
+exibe($aux)!
+
+@ &c <- 23;
+exibe(*c e: )!
+exibe(&c)!
+
+@ &x <- 5;
+exibe(*x e: )!
+exibe(&x)!
+
+&x <- 14;
+exibe(*x e: )!
+exibe(&x)!

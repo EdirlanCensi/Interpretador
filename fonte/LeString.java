@@ -13,7 +13,7 @@
  
  class LeString {
 	String linha;
-	int i,valores, indiceVet = 0, teste = 0,linhaAtual = 0, testeL=0,testeS=0;
+	int i,valores, indiceVet = 0, teste = 0,linhaAtual = 0, testeL=0,testeS=0, tif=0, c=0;
 	Variaveis var[] = new Variaveis[200];
 	public int v[] = new int[300];
 	public int topo = -1;
@@ -45,8 +45,9 @@
 					}
 					if (teste == 0 && linha.contains("@") ){ //se não existe a variavel, declara e armazena seu valor 
 						var[indiceVet] = v;
+						//System.out.println( var[j].valor);
 						indiceVet++;
-					}						
+					}				
 				}
 				
 				//printar na tela
@@ -94,20 +95,35 @@
 					int fl;
 					String linhaAux;
 					fl = f.fluxo(linha,var,indiceVet,linhaAtual); //faz o fluxo
-					if(fl == -1){ //se expressão for falsa ignora escopo do if
+					if(fl == -1){ //se expressão for falsa ignora escopo do if						
 						linhaAux = "end";	
 						while(!s[linhaAtual].contains(linhaAux)){
-							linhaAtual++;
+							if (s[linhaAtual].contains("senao")){
+								c = 0;
+								break;
+							}
+							else{
+								linhaAtual++;
+							}
 						}
 					}else if(fl == 0){
 						System.out.println("Operador nao existe");
 						break;
 					}else{
 						linhaAtual = fl;
+						c++;
 					}
 					i = linhaAtual;
 				}
 				
+				if(c != 0){
+					if (s[linhaAtual].contains("senao")){
+						while(!s[linhaAtual].contains("end")){
+							linhaAtual++;
+						}
+					}
+					i = linhaAtual;
+				}
 				//Ler do teclado e escrever na variável
 				if(linha.contains("leia(")){
 					Leia e = new Leia();

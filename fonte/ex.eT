@@ -4,13 +4,13 @@
 @ &aux2;
 @ &teste <- 0;
 	
-	exibe(*Digite um numero)!
+	exibe(*Digite um numeros)!
 	leia(&num)!
+	
 	&aux <- (&num-1);
 	enquanto(&i < &aux)
 		&aux2 <- (&num % &i);
 		se(&aux2 ? 0)
-			exibe(*NAO EH PRIMO)!
 			&teste <- 1;
 		end
 		&i <- (&i+1);
@@ -18,4 +18,6 @@
 	
 	se(&teste ? 0)
 		exibe(*PRIMO)!
+	senao
+		exibe(*NAO PRIMO)!
 	end
