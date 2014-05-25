@@ -10,7 +10,7 @@ exibe($aux)!
 exibe(*c e: )!
 exibe(&c)!
 
-@ &x <- 5;
+&x <- 5;
 exibe(*x e: )!
 exibe(&x)!
 

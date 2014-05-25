@@ -29,7 +29,8 @@
 				}
 				
 				//identifica que é uma declaração de variavel ou atribuição
-				if(linha.contains(";")){ 
+				if(linha.contains(";")){
+					teste = 0;
 					Variaveis v = new Variaveis();
 					v.declaraVar(linha,var, indiceVet);
 					for(int i=0; i < indiceVet; i++){ //verifica se já existe a variavel declarada e altera o valor dela caso exita;

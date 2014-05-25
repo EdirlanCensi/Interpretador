@@ -18,7 +18,7 @@
 		for(int i = 0; i < s.length(); i++){
 				if(s.charAt(i) == '*'){
 					aux = s.substring(s.indexOf("*")+1, s.indexOf("!")-1);
-					System.out.print(aux);
+					System.out.print(aux+" ");
 				}
 				
 				if(s.charAt(i) == '&'){ //se a variavel for double
